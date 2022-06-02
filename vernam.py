@@ -4,7 +4,8 @@ def vernam(t):
     ans=''
     g=0
     for i in t:
-        ans+=alph[int((alph.index(i)) + int(alph.index(gamma[g]) % 6)) % 39]
-    g+=1
+        ans+=alph[int((alph.index(i)) + int(alph.index(gamma[g%6]))) % 39]
+        g+=1
     return ans
+
 print(vernam(input('Введите сообщение: ')))
