@@ -1,9 +1,8 @@
 alph='abcdefghijklmnopqrstuvwxyz'
-def replace(t):
+def replace(num):
     ans=''
-    t=t.split('|')
-    print(t)
-    for i in t:
+    num=num[num.find('{')+1:-1].split('|')
+    for i in num:
         ans+=alph[int(i)-1]
-    print(ans)
-replace(input('Введите зашифрованное сообщение:'))
+    return ans
+print(replace(input('Введите зашифрованное сообщение:')))
