@@ -1,4 +1,4 @@
-def xor(t):
+def vernam(t):
     alph="qwertyuiopasdfghjklzxcvbnm_{}1234567890"
     gamma="thekey"
     ans=''
@@ -7,4 +7,4 @@ def xor(t):
         ans+=alph[int((alph.index(i)) + int(alph.index(gamma[g]) % 6)) % 39]
     g+=1
     return ans
-print(xor(input('Введите сообщение: ')))
+print(vernam(input('Введите сообщение: ')))
