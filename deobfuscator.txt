@@ -1,0 +1,7 @@
+def wabbit (a1 ,a2 ):
+    R1=[1 ,0 ]
+    a3=1 
+    while a3<a1 
+        R1.insert (0 ,sum (R1[1 :a2 ]))
+        a3+=1 
+    print (sum (R1[0 :a2 ]))
